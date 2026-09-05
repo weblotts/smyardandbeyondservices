@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
@@ -12,9 +13,14 @@ export default function Header() {
     <div className="navbar sticky top-0 z-50 border-b border-primary/15 bg-base-100/95 px-6 backdrop-blur">
       <div className="navbar-start">
         <Link href="/" className="flex items-center gap-3">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary font-display text-lg font-bold text-secondary">
-            S&M
-          </span>
+          <Image
+            src="/brand/icon-mark.png"
+            alt="S&M Yard and Beyond Services"
+            width={44}
+            height={44}
+            className="h-11 w-11"
+            priority
+          />
           <span className="hidden font-display text-sm font-semibold uppercase leading-tight text-neutral sm:block">
             Yard &amp; Beyond
             <br />

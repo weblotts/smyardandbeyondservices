@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { business } from "@/lib/data";
 
@@ -10,7 +11,8 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="footer footer-center bg-primary-deep gap-4 bg-[var(--color-pine-deep)] px-6 py-10 text-primary-content/70">
+    <footer className="footer footer-center gap-4 bg-[var(--color-pine-deep)] px-6 py-10 text-primary-content/70">
+      <Image src="/brand/icon-lime.png" alt="" width={40} height={40} className="h-10 w-10" aria-hidden />
       <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 font-display text-sm">
         {footerLinks.map((link) => (
           <Link key={link.href} href={link.href} className="hover:text-primary-content">
