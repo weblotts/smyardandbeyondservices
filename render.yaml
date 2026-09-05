@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: smyardandbeyond-website
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    region: ohio
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production

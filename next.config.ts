@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   images: {
     // Nothing on this site renders an image wider than ~1200px in its own
     // container, so cap the generated variants there instead of Next's
