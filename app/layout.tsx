@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ...pageMetadata({
     title: `${business.name} | Landscaping & Snow Removal, Merrimack Valley`,
     description:
-      "Landscaping, lawn maintenance, mulch, hedge trimming, seasonal clean-ups and snow removal across the Merrimack Valley — run year-round by Sentamu and Mudoola.",
+      "Landscaping, lawn maintenance, mulch, hedge trimming, seasonal clean-ups and snow removal across the Merrimack Valley — run year-round by Timothy and Elijah.",
     path: "/",
   }),
   icons: {

@@ -1,7 +1,7 @@
 export const business = {
   name: "S&M Yard and Beyond",
   legalName: "SM Yard & Beyond Services",
-  owners: ["Sentamu", "Mudoola"],
+  owners: ["Timothy", "Elijah"],
   phone: "978-715-7481",
   phoneHref: "tel:+19787157481",
   email: "info@smyardandbeyondservices.com",

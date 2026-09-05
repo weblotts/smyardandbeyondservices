@@ -10,7 +10,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Services",
   description:
-    "Landscaping, lawn maintenance, mulch installation, hedge trimming, seasonal clean-ups, lawn repairs and snow removal — year-round, run by Sentamu and Mudoola.",
+    "Landscaping, lawn maintenance, mulch installation, hedge trimming, seasonal clean-ups, lawn repairs and snow removal — year-round, run by Timothy and Elijah.",
   path: "/services",
 });
 
