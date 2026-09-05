@@ -18,6 +18,9 @@ const poppins = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL(business.url),
+  other: {
+    "color-scheme": "light dark",
+  },
   ...pageMetadata({
     title: `${business.name} | Landscaping & Snow Removal, Merrimack Valley`,
     description:
@@ -36,7 +39,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${poppins.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${poppins.variable} h-full antialiased`}
+      style={{ colorScheme: "light dark" }}
+    >
       <body className="min-h-full flex flex-col bg-khaki text-ink">
         <LocalBusinessSchema />
         {children}

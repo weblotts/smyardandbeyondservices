@@ -25,8 +25,34 @@
   --radius-field: 0.375rem;
   --radius-selector: 0.375rem;
 }
+@plugin "daisyui/theme" {
+  name: "smyard-dark";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: #16211a;
+  --color-base-200: #1e2c24;
+  --color-base-300: #2a3b31;
+  --color-base-content: #e7e4d8;
+  --color-primary: #2f5d3a;
+  --color-primary-content: #f4f1e6;
+  --color-secondary: #98bc34;
+  --color-secondary-content: #14240f;
+  --color-accent: #c8794f;
+  --color-accent-content: #1a0f08;
+  --color-neutral: #c9cdcc;
+  --color-neutral-content: #16211a;
+  --color-info: #8fb8c9;
+  --color-success: #6fae53;
+  --color-warning: #d9a24a;
+  --color-error: #e07a5f;
+  --radius-box: 0.5rem;
+  --radius-field: 0.375rem;
+  --radius-selector: 0.375rem;
+}
 
 :root {
+  color-scheme: light;
   --color-pine: #22482a;
   --color-pine-deep: #1a3620;
   --color-lime: #98bc34;
@@ -36,6 +62,21 @@
   --color-paper: #fbf9f2;
   --color-mulch: #8a4a2b;
   --color-ink: #1c1b17;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-pine: #2f5d3a;
+    --color-pine-deep: #12241a;
+    --color-lime: #98bc34;
+    --color-lime-deep: #7fa02b;
+    --color-slate: #c9cdcc;
+    --color-khaki: #1e2c24;
+    --color-paper: #16211a;
+    --color-mulch: #c8794f;
+    --color-ink: #e7e4d8;
+  }
 }
 
 @theme inline {
@@ -56,4 +97,17 @@ body {
   background: var(--color-khaki);
   color: var(--color-ink);
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+}
+
+/*
+ * Dark mode: `primary` is a deep green so `bg-primary` sections (hero, page
+ * headers) stay legible with light text. That same deep green is too dark to
+ * read as `text-primary` on our near-black cards, so lift it for text use.
+ * Nothing on a `bg-primary` surface uses `text-primary` (those use
+ * `primary-content`), so a blanket override is safe here.
+ */
+@media (prefers-color-scheme: dark) {
+  .text-primary {
+    color: #6fb07f;
+  }
 }
