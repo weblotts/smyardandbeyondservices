@@ -2,23 +2,23 @@ import { business, towns } from "@/lib/data";
 
 export default function Contact() {
   return (
-    <section id="contact" className="border-b border-pine/15 bg-pine text-paper">
+    <section className="border-b border-primary/15 bg-primary text-primary-content">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 sm:py-20 md:grid-cols-2">
         <div>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">Request a quote</h2>
-          <p className="mt-3 max-w-md text-paper/85">
+          <p className="mt-3 max-w-md text-primary-content/85">
             Tell us about your yard and we&apos;ll get back to you with a free estimate.
           </p>
 
-          <div className="mt-8 space-y-2 text-sm text-paper/85">
+          <div className="mt-8 space-y-2 text-sm text-primary-content/85">
             <p>
-              <span className="font-display font-semibold text-lime">Phone:</span>{" "}
+              <span className="font-display font-semibold text-secondary">Phone:</span>{" "}
               <a href={business.phoneHref} className="hover:underline">
                 {business.phone}
               </a>
             </p>
             <p>
-              <span className="font-display font-semibold text-lime">Email:</span>{" "}
+              <span className="font-display font-semibold text-secondary">Email:</span>{" "}
               <a href={`mailto:${business.email}`} className="hover:underline">
                 {business.email}
               </a>
@@ -34,9 +34,9 @@ export default function Contact() {
             2. Replace with a Next.js Server Action that emails via Resend
                or Nodemailer.
         */}
-        <form className="space-y-4 rounded-lg border border-paper/20 bg-paper p-6 text-ink">
+        <form className="card space-y-4 border border-primary-content/20 bg-base-100 p-6 text-base-content">
           <div>
-            <label htmlFor="name" className="block font-display text-sm font-semibold text-pine-deep">
+            <label htmlFor="name" className="label font-display text-sm font-semibold text-primary">
               Name
             </label>
             <input
@@ -44,21 +44,24 @@ export default function Contact() {
               name="name"
               type="text"
               required
-              className="mt-1 w-full rounded-md border border-slate/30 bg-khaki px-3 py-2 text-sm outline-none focus:border-pine"
+              className="input input-bordered w-full bg-base-200 text-sm"
             />
           </div>
 
           <div>
-            <label htmlFor="town" className="block font-display text-sm font-semibold text-pine-deep">
+            <label htmlFor="town" className="label font-display text-sm font-semibold text-primary">
               Town
             </label>
             <select
               id="town"
               name="town"
               required
-              className="mt-1 w-full rounded-md border border-slate/30 bg-khaki px-3 py-2 text-sm outline-none focus:border-pine"
+              defaultValue=""
+              className="select select-bordered w-full bg-base-200 text-sm"
             >
-              <option value="">Select your town</option>
+              <option value="" disabled>
+                Select your town
+              </option>
               {towns.map((town) => (
                 <option key={town.slug} value={town.name}>
                   {town.name}, {town.state}
@@ -69,7 +72,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <label htmlFor="details" className="block font-display text-sm font-semibold text-pine-deep">
+            <label htmlFor="details" className="label font-display text-sm font-semibold text-primary">
               Project details
             </label>
             <textarea
@@ -78,14 +81,11 @@ export default function Contact() {
               rows={4}
               required
               placeholder="What do you need done?"
-              className="mt-1 w-full rounded-md border border-slate/30 bg-khaki px-3 py-2 text-sm outline-none focus:border-pine"
+              className="textarea textarea-bordered w-full bg-base-200 text-sm"
             />
           </div>
 
-          <button
-            type="submit"
-            className="w-full rounded-md bg-lime px-6 py-3 font-display text-sm font-semibold text-pine-deep transition-colors hover:bg-lime-deep"
-          >
+          <button type="submit" className="btn btn-secondary w-full font-display text-secondary-content">
             Send request
           </button>
         </form>

@@ -1,4 +1,30 @@
 @import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "smyard";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #fbf9f2;
+  --color-base-200: #efead9;
+  --color-base-300: #e2dcc4;
+  --color-base-content: #1c1b17;
+  --color-primary: #214829;
+  --color-primary-content: #fbf9f2;
+  --color-secondary: #98bc34;
+  --color-secondary-content: #193620;
+  --color-accent: #8a4a2b;
+  --color-accent-content: #fbf9f2;
+  --color-neutral: #484e51;
+  --color-neutral-content: #fbf9f2;
+  --color-info: #484e51;
+  --color-success: #7fa02b;
+  --color-warning: #8a4a2b;
+  --color-error: #b3462c;
+  --radius-box: 0.5rem;
+  --radius-field: 0.375rem;
+  --radius-selector: 0.375rem;
+}
 
 :root {
   --color-pine: #214829;

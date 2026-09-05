@@ -1,42 +1,57 @@
 import Link from "next/link";
 
+const navLinks = [
+  { href: "/services", label: "Services" },
+  { href: "/service-areas", label: "Service area" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+];
+
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-pine/15 bg-paper/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+    <div className="navbar sticky top-0 z-50 border-b border-primary/15 bg-base-100/95 px-6 backdrop-blur">
+      <div className="navbar-start">
         <Link href="/" className="flex items-center gap-3">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-pine font-display text-lg font-bold text-lime">
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary font-display text-lg font-bold text-secondary">
             S&M
           </span>
-          <span className="hidden font-display text-sm font-semibold uppercase leading-tight text-slate sm:block">
+          <span className="hidden font-display text-sm font-semibold uppercase leading-tight text-neutral sm:block">
             Yard &amp; Beyond
             <br />
             Services
           </span>
         </Link>
+      </div>
 
-        <nav className="hidden items-center gap-7 font-sans text-sm font-medium text-slate md:flex">
-          <Link href="/#services" className="hover:text-pine">
-            Services
-          </Link>
-          <Link href="/#seasons" className="hover:text-pine">
-            Year round
-          </Link>
-          <Link href="/#area" className="hover:text-pine">
-            Service area
-          </Link>
-          <Link href="/#about" className="hover:text-pine">
-            About
-          </Link>
-        </nav>
+      <div className="navbar-center hidden md:flex">
+        <ul className="menu menu-horizontal gap-1 px-1 font-display text-sm font-medium text-neutral">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <Link href={link.href}>{link.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-        <Link
-          href="/#contact"
-          className="rounded-md bg-lime px-4 py-2 font-display text-sm font-semibold text-pine-deep transition-colors hover:bg-lime-deep"
-        >
+      <div className="navbar-end gap-2">
+        <div className="dropdown dropdown-end md:hidden">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-square">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <ul tabIndex={0} className="menu dropdown-content menu-sm z-10 mt-3 w-48 rounded-box bg-base-100 p-2 font-display shadow">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href}>{link.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <Link href="/contact" className="btn btn-secondary font-display text-sm text-secondary-content">
           Request a quote
         </Link>
       </div>
-    </header>
+    </div>
   );
 }
