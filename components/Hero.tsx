@@ -27,7 +27,7 @@ export default function Hero({ townName }: { townName?: string }) {
           </div>
         </div>
 
-        <div className="order-1 md:order-2 md:h-full">
+        <div className="order-1 md:order-2">
           <HeroSlider />
         </div>
       </div>

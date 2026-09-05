@@ -22,7 +22,7 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <div className="relative h-72 overflow-hidden rounded-box border border-primary-content/20 shadow-[6px_6px_0_0_var(--color-lime)] sm:h-96 md:h-[70%] md:max-h-[420px]">
+    <div className="relative h-72 overflow-hidden rounded-box border border-primary-content/20 shadow-[6px_6px_0_0_var(--color-lime)] sm:h-96 md:h-[420px]">
       {slides.map((slide, i) => (
         <Image
           key={slide.src}
