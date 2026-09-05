@@ -1,19 +1,21 @@
-import type { Metadata } from "next";
 import Header from "@/components/Header";
 import ServiceArea from "@/components/ServiceArea";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { business } from "@/lib/data";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: `Service Area | ${business.name}`,
+export const metadata = pageMetadata({
+  title: "Service Area",
   description:
     "S&M Yard and Beyond serves Westford, Nashua, Lowell, Chelmsford, Billerica, Tewksbury, Littleton, Ayer, Tyngsboro, Dracut and Acton.",
-};
+  path: "/service-areas",
+});
 
 export default function ServiceAreasPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "Service Area", path: "/service-areas" }]} />
       <Header />
       <main className="flex-1">
         <section className="border-b border-primary/15 bg-primary text-primary-content">
@@ -25,7 +27,7 @@ export default function ServiceAreasPage() {
             </p>
           </div>
         </section>
-        <ServiceArea />
+        <ServiceArea showHeading={false} />
         <Contact />
       </main>
       <Footer />

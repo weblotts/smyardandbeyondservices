@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import Header from "@/components/Header";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { business } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: `About | ${business.name}`,
+export const metadata = pageMetadata({
+  title: "About",
   description: `Meet ${business.owners[0]} and ${business.owners[1]}, the two owners who personally run every job for ${business.name}.`,
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

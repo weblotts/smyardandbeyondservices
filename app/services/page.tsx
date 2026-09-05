@@ -1,16 +1,18 @@
-import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Services from "@/components/Services";
 import Seasons from "@/components/Seasons";
+import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { business } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: `Services | ${business.name}`,
+export const metadata = pageMetadata({
+  title: "Services",
   description:
     "Landscaping, lawn maintenance, mulch installation, hedge trimming, seasonal clean-ups, lawn repairs and snow removal — year-round, run by Sentamu and Mudoola.",
-};
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (
@@ -28,6 +30,7 @@ export default function ServicesPage() {
         </section>
         <Services />
         <Seasons />
+        <Faq />
         <Contact />
       </main>
       <Footer />

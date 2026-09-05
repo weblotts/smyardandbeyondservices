@@ -1,19 +1,29 @@
 import Link from "next/link";
 import { towns } from "@/lib/data";
 
-export default function ServiceArea({ currentSlug }: { currentSlug?: string }) {
+export default function ServiceArea({
+  currentSlug,
+  showHeading = true,
+}: {
+  currentSlug?: string;
+  showHeading?: boolean;
+}) {
   return (
     <section className="border-b border-primary/15 bg-base-200">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
-        <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl">
-          Where we work
-        </h2>
-        <p className="mt-3 max-w-2xl text-neutral">
-          Based in the Merrimack Valley, covering towns across Massachusetts and southern New
-          Hampshire.
-        </p>
+        {showHeading && (
+          <>
+            <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl">
+              Where we work
+            </h2>
+            <p className="mt-3 max-w-2xl text-neutral">
+              Based in the Merrimack Valley, covering towns across Massachusetts and southern New
+              Hampshire.
+            </p>
+          </>
+        )}
 
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className={`flex flex-wrap gap-3 ${showHeading ? "mt-8" : ""}`}>
           {towns.map((town) => {
             const isCurrent = town.slug === currentSlug;
             return (

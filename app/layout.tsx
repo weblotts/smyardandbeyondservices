@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { business } from "@/lib/data";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import { pageMetadata } from "@/lib/seo";
 
 const poppins = localFont({
   variable: "--font-poppins",
@@ -17,9 +18,12 @@ const poppins = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL(business.url),
-  title: `${business.name} | Landscaping & Snow Removal, Merrimack Valley`,
-  description:
-    "Landscaping, lawn maintenance, mulch, hedge trimming, seasonal clean-ups and snow removal across the Merrimack Valley — run year-round by Sentamu and Mudoola.",
+  ...pageMetadata({
+    title: `${business.name} | Landscaping & Snow Removal, Merrimack Valley`,
+    description:
+      "Landscaping, lawn maintenance, mulch, hedge trimming, seasonal clean-ups and snow removal across the Merrimack Valley — run year-round by Sentamu and Mudoola.",
+    path: "/",
+  }),
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },

@@ -3,7 +3,7 @@ import { business } from "@/lib/data";
 export default function About() {
   return (
     <section className="border-b border-primary/15 bg-base-100">
-      <div className="mx-auto max-w-3xl px-6 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
         <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl">
           Two guys, every job
         </h2>
