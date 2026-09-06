@@ -23,8 +23,8 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-6xl px-6 py-14">
             <h1 className="font-display text-4xl font-bold sm:text-5xl">Our services</h1>
             <p className="mt-4 max-w-xl text-primary-content/85">
-              Eight services covering every season, all run by {business.owners[0]} and{" "}
-              {business.owners[1]} themselves.
+              Services to improve, maintain, and uplift your property, covering every season and all
+              run by {business.owners[0]} and {business.owners[1]} themselves.
             </p>
           </div>
         </section>

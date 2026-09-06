@@ -52,7 +52,8 @@ export const services: Service[] = [
   {
     name: "Fall Clean-Up",
     slug: "fall-clean-up",
-    description: "Leaves cleared and beds put to bed before the cold sets in.",
+    description:
+      "We clear the leaves, clean up the beds, remove seasonal debris, and leave your property ready for winter. Curbside leaf cleanups available.",
     season: "Fall",
   },
   {
