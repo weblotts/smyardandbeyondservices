@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/service-areas`, priority: 0.9 },
     { url: `${base}/about`, priority: 0.6 },
     { url: `${base}/contact`, priority: 0.7 },
+    { url: `${base}/cookie-policy`, priority: 0.3 },
     ...towns.map((town) => ({
       url: `${base}/service-areas/${town.slug}`,
       priority: 0.8,

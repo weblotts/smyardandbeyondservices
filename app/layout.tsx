@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { business } from "@/lib/data";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import CookieConsent from "@/components/CookieConsent";
+import PromoPopup from "@/components/PromoPopup";
 import { pageMetadata } from "@/lib/seo";
 
 const poppins = localFont({
@@ -47,6 +49,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-khaki text-ink">
         <LocalBusinessSchema />
         {children}
+        <PromoPopup />
+        <CookieConsent />
       </body>
     </html>
   );

@@ -1,5 +1,7 @@
+import promotionsData from "@/data/promotions.json";
+
 export const business = {
-  name: "S&M Yard and Beyond",
+  name: "SM Yard and Beyond",
   legalName: "SM Yard & Beyond Services",
   owners: ["Timothy", "Elijah"],
   phone: "978-715-7481",
@@ -127,3 +129,25 @@ export const seasons = [
     services: ["Snow Removal"],
   },
 ];
+
+export type Promotion = {
+  id: string;
+  title: string;
+  detail: string;
+  cta?: { label: string; href: string };
+  /** ISO dates (inclusive start, inclusive end). Omit to always show. */
+  starts?: string;
+  ends?: string;
+};
+
+// Seasonal prices / promotions — edit data/promotions.json to change what pops up on the site.
+export const promotions: Promotion[] = promotionsData.promotions as Promotion[];
+
+export function activePromotions(now: Date = new Date()): Promotion[] {
+  const today = now.toISOString().slice(0, 10);
+  return promotions.filter((p) => {
+    if (p.starts && today < p.starts) return false;
+    if (p.ends && today > p.ends) return false;
+    return true;
+  });
+}

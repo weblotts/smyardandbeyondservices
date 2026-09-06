@@ -1,0 +1,13 @@
+{
+  "$comment": "Seasonal prices / promotions shown in the site popup. Edit this file to add, change, or remove offers. Each entry: id (unique slug), title, detail; optional cta {label, href}; optional starts/ends as YYYY-MM-DD (inclusive) to auto show/hide. Only the first currently-active entry is shown, and only once per visitor.",
+  "promotions": [
+    {
+      "id": "fall-cleanups-2026",
+      "title": "Fall clean-ups are booking now",
+      "detail": "Full-service fall clean-ups starting from as low as $350.",
+      "cta": { "label": "Get a quote", "href": "/contact" },
+      "starts": "2026-09-01",
+      "ends": "2026-11-30"
+    }
+  ]
+}

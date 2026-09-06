@@ -6,7 +6,7 @@ export default function About() {
           Two guys, every job
         </h2>
         <p className="mt-4 text-base leading-relaxed text-neutral">
-          S&amp;M Yard and Beyond was started in 2026 by Elijah and Timothy with a simple goal: put
+          SM Yard and Beyond was started by Elijah and Timothy with a simple goal: put
           our skills to work doing something we enjoy. We&apos;re hands-on, enjoy working outdoors,
           and take pride in seeing the transformation that comes from a job done right.
         </p>
@@ -17,7 +17,7 @@ export default function About() {
         </p>
         <p className="mt-4 text-base leading-relaxed text-neutral">
           We&apos;re currently a two-man crew, and while we hope to grow in the future, our
-          customers can count on that personal touch today. When you hire S&amp;M Yard and Beyond,
+          customers can count on that personal touch today. When you hire SM Yard and Beyond,
           you know who you&apos;re talking to, who&apos;s doing the work, and who to call when you
           need us.
         </p>

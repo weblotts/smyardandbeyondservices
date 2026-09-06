@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
             <Image
               src="/brand/icon-lime-cropped.png"
-              alt="S&M Yard and Beyond Services"
+              alt="SM Yard and Beyond Services"
               width={91}
               height={32}
               className="h-9 w-auto"

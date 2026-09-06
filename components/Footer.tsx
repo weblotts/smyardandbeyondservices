@@ -7,6 +7,7 @@ const footerLinks = [
   { href: "/service-areas", label: "Service area" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/cookie-policy", label: "Cookie policy" },
 ];
 
 export default function Footer() {
@@ -14,12 +15,12 @@ export default function Footer() {
     <footer className="bg-[var(--color-pine-deep)] px-6 py-10 text-primary-content/70 sm:py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
         <Image
-          src="/brand/icon-white-cropped.png"
-          alt=""
-          width={91}
-          height={32}
-          className="h-8 w-auto"
-          aria-hidden
+          src="/brand/logo-white-full.png"
+          alt={`${business.legalName} logo`}
+          width={2484}
+          height={1680}
+          className="h-24 w-auto sm:h-28"
+          priority={false}
         />
 
         <nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 font-display text-sm">

@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Service Area",
   description:
-    "S&M Yard and Beyond serves Westford, Nashua, Lowell, Chelmsford, Billerica, Tewksbury, Littleton, Ayer, Tyngsboro, Dracut and Acton.",
+    "SM Yard and Beyond serves Westford, Nashua, Lowell, Chelmsford, Billerica, Tewksbury, Littleton, Ayer, Tyngsboro, Dracut and Acton.",
   path: "/service-areas",
 });
 
